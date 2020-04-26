@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Find Flights</title>
 </head>
 <body>
+<pre>
+    <H2>*********** Find  Your Flights **************</H2>
+    <form th:action="@{/findFlights}" method="post">
+        From    <input type="text" name="from">
+        To      <input type="text" name="to">
+Departure Date  <input type="text" name="departureDate">
+        <input type="submit" value="Search">
+
+
+    </form>
+</pre>
 
 </body>
 </html>
