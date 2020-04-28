@@ -9,8 +9,9 @@ import java.util.Date;
 import java.util.List;
 
 public interface FlightRepository extends JpaRepository<flight,Integer> {
+   // select operating_airlines,departure_city,arrival_city,date_of_departure,estimated_departure_time
 
-    @Query("select operating_airlines,departure_city,arrival_city,date_of_departure,estimated_departure_time from flight where departure_city=:departure_city_var and arrival_city=:arrival_city_var and date_of_departure=:date_of_departure_var")
+    @Query(" from flight where departure_city=:departure_city_var and arrival_city=:arrival_city_var and date_of_departure=:date_of_departure_var")
     List<flight> findAllFlights(@Param("departure_city_var") String departure_city,@Param("arrival_city_var") String arrival_city,
                                 @Param("date_of_departure_var") Date s);
 

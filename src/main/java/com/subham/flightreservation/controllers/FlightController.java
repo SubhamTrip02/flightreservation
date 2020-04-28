@@ -23,7 +23,7 @@ public class FlightController {
     @RequestMapping("/findFlights")
     public String findFlights(@RequestParam("from") String departure_city ,
                               @RequestParam("to") String arrival_city,
-                              @RequestParam("departureDate") @DateTimeFormat(pattern = "yyyy-mm-dd")Date date_of_departure,
+                              @RequestParam("departureDate") @DateTimeFormat(pattern = "mm-dd-yyyy")Date date_of_departure,
                               Model model) throws ParseException {
 
 
